@@ -56,6 +56,7 @@
       <button on:click={addGift}>agregar</button>
     </footer>
   </main>
+  <footer>made with svelte - adv 2022</footer>
 </div>
 
 <style lang="scss">
@@ -64,6 +65,15 @@
     background: rgb(165, 69, 69);
     display: grid;
     place-content: center;
+
+    > footer {
+      position: absolute;
+      bottom: 10px;
+      right: 50%;
+      transform: translate(50%);
+      color: #ffffff;
+      font-size: 12px;
+    }
   }
 
   .gifts {
