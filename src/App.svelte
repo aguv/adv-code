@@ -2,6 +2,7 @@
   import Icon from 'svelte-icons-pack/Icon.svelte';
   import AiTwotoneGift from 'svelte-icons-pack/ai/AiTwotoneGift';
   import RiSystemDeleteBin5Line from 'svelte-icons-pack/ri/RiSystemDeleteBin5Line';
+  import svelte from './assets/svelte-icon.svg';
 
   import uuid4 from 'uuid4';
 
@@ -30,6 +31,7 @@
 
 <div class="container">
   <main class="gifts">
+    <img src={svelte} class="icon-img" />
     <header>
       <Icon src={AiTwotoneGift} />
       <span>Regalos</span>
@@ -65,6 +67,7 @@
   }
 
   .gifts {
+    position: relative;
     background-color: rgb(43, 133, 106);
     padding: 1rem;
     display: flex;
@@ -102,5 +105,12 @@
       background: rgb(89, 95, 94);
       cursor: pointer;
     }
+  }
+
+  .icon-img {
+    height: 50px;
+    right: -10px;
+    top: -25px;
+    position: absolute;
   }
 </style>
