@@ -22,6 +22,10 @@
     console.log('zxczxc');
     gifts = gifts.filter((gift) => gift.id !== id);
   };
+
+  const deleteAll = () => {
+    gifts = [];
+  };
 </script>
 
 <div class="container">
@@ -42,9 +46,12 @@
         <span>No tem regalitos :)</span>
       {/each}
     </div>
+    {#if gifts.length}
+      <button on:click={deleteAll}>borrar todos</button>
+    {/if}
     <footer>
       <input bind:value={newGift} />
-      <button on:click={addGift}>Agregar</button>
+      <button on:click={addGift}>agregar</button>
     </footer>
   </main>
 </div>
